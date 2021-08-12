@@ -11,9 +11,11 @@ class Menu:
         for food_item, cost in self.menu_items.items():
             print(food_item, cost)
 
-
-if __name__ == "__main__":
+def main():
     m = Menu()
     m.add("idly", 10)
     m.add("vada", 20)
     m.show()
+
+if __name__ == "__main__":
+    main()

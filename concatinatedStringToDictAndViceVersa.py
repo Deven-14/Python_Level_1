@@ -8,9 +8,12 @@ def concatinated_string_to_dict(concatinated_string):
 def dict_to_concatinated_string(dict_):
     return ';'.join(['='.join(ele) for ele in dict_.items()])
 
-if __name__ == "__main__":
+def main():
     concatinated_string = input_concatinated_string()
     dict_ = concatinated_string_to_dict(concatinated_string)
     print(dict_)
     concatinated_string = dict_to_concatinated_string(dict_)
     print(concatinated_string)
+
+if __name__ == "__main__":
+    main()

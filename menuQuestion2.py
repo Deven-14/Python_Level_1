@@ -16,7 +16,10 @@ class Menu:
             string += (str(food_item) + ' ' + str(cost) + '\n')
         return string[:-1] #removing the last \n
 
-if __name__ == "__main__":
+def main():
     m = Menu()
     m = m + ("idly", 10) + ("vada", 20)
     print(m)
+
+if __name__ == "__main__":
+    main()
