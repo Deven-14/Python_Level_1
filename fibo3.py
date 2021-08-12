@@ -16,7 +16,6 @@ def fibonacci(n):
 
 def main():
     n = input_n()
-    num1, num2, num = 0, 1, 1
     for i in (x**2 for x in fibonacci(n)):
         print(i)
 
