@@ -32,17 +32,6 @@ class Order(dict):
             string += (str(food_item) + ' ' + str(quantity) + '\n')
         return string[:-1]
 
-    def bill(self):
-        string = "---bill---".center(75) + '\n'
-        string += "Food Item".ljust(50) + "-  Quantity  -  Cost\n"
-        
-        for food_item, quantity in self.items():
-            cost = self.menu[food_item] * quantity
-            string += f"{food_item}".ljust(50) + "-" + f"{quantity}".center(12) + f"-  {cost}\n"
-        string += "Total Amount".ljust(63) + f"-  {self.total_amount}\n"
-
-        return string
-
 
 class Bill:
 
@@ -61,6 +50,7 @@ class Bill:
 
         return string
 
+
 def main():
     m = Menu()
     m["idly"] = 10
@@ -73,7 +63,6 @@ def main():
         print(e)
     b = Bill(m, o)
     print(b)
-    print(o.bill())
 
 if __name__ == "__main__":
     main()
