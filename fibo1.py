@@ -7,7 +7,7 @@ class Fibonacci:
             raise ValueError
 
     def __iter__(self):
-        self.num1, self.num2, self.next_num = 0, 1, None
+        self.num1, self.num2 = 0, 1
         self.i = 1
         return self
 
@@ -15,9 +15,9 @@ class Fibonacci:
         if self.i > self.n:
             raise StopIteration
         
-        self.next_num, self.num1, self.num2 = self.num1, self.num2, self.num1 + self.num2
+        temp, self.num1, self.num2 = self.num1, self.num2, self.num1 + self.num2
         self.i += 1
-        return self.next_num
+        return temp
 
 def main():
     x = Fibonacci(15)
