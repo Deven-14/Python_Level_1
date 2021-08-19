@@ -15,6 +15,7 @@ def decorator(func):
 
 @decorator
 def decorate(*args, **kwargs):
+    print("Do some work")
     return "Completed"
 
 def main():
